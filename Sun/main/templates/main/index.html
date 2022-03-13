@@ -3,8 +3,13 @@
 {% block title %}<h1>Hello</h1>{% endblock %}
 
 {% block content %}
-    <h1>Hello</h1>
-    <h2>Hello my friend</h2>
+    <div class="features">
+        <h1>Главная страница</h1>
+        <p>Грядущий релиз версии 1.11 языка программирования
+            Go принесет экспериментальную поддержку модулей — новую систему управления зависимостями для Go.
+            (прим.перев.: релиз состоялся)</p>
+    </div>
+    <button class="btn btn-warning">На страницу про нас</button>
 
     {% include 'main/test.html' %}
 
