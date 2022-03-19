@@ -1,15 +1,28 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}<h1>Hello</h1>{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>Главная страница</h1>
+        <h1>{{ title }}</h1>
         <p>Грядущий релиз версии 1.11 языка программирования
             Go принесет экспериментальную поддержку модулей — новую систему управления зависимостями для Go.
             (прим.перев.: релиз состоялся)</p>
+        <button class="btn btn-warning">{% filter upper %}На страницу про нас</button>
+        {% endfilter %}
+        {% for el in values %}
+            {% if el == 'Two' %}
+                <p>{{ el|upper }}</p>
+            {% endif %}
+        {% endfor %}
+
+        {{ obj.Ship }}
+
+        {% for el in obj %}
+            <p>{{ el }}</p>
+        {% endfor %}
     </div>
-    <button class="btn btn-warning">На страницу про нас</button>
+
 
     {% include 'main/test.html' %}
 
