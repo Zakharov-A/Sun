@@ -19,6 +19,7 @@ class ArticlesForm(ModelForm):
             }),
             "date": DateTimeInput(attrs={
                 'class': 'form-control',
+                'placeholder': 'Дата публикации'
             }),
             "full_text": Textarea(attrs={
                 'class': 'form-control',
